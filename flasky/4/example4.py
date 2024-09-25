@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from flask import session, redirect, url_for
 from flask_bootstrap import Bootstrap
 from datetime import datetime
 from flask_moment import Moment
@@ -7,7 +8,7 @@ from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'hard to guess string'
+app.config['SECRET_KEY'] = 'pxli'
 bootstrap = Bootstrap(app)
 moment = Moment(app)
 
@@ -25,12 +26,11 @@ def internal_server_error(e):
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    name = None
     form = NameForm()
     if form.validate_on_submit():
-        name = form.name.data
-        form.name.data = ''
-    return render_template('index.html', form=form, name=name)
+        session['name'] = form.name.data
+        return redirect(url_for('index'))
+    return render_template('index.html', form=form, name=session.get('name'))
 
 @app.route('/user/<name>')
 def user(name):
