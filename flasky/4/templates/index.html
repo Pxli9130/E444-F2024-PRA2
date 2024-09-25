@@ -4,12 +4,12 @@
 {% block page_content %}
 <div class="page-header">
     {% if not name %}
-        <h1><strong>Hello, Stranger!</strong></h1>
+        <h1><strong>Hello, Stranger! Welcome to PRA2 Docker!</strong></h1>
     {% elif email and is_uoft_email %}
-        <h1><strong>Hello, {{ name }}!</strong></h1>
+        <h1><strong>Hello, {{ name }}! Welcome to PRA2 Docker!</strong></h1>
         <h1><strong>Your UofT email is {{ email }}</strong></h1>
     {% elif email %}
-        <h1><strong>Hello, {{ name }}!</strong></h1>
+        <h1><strong>Hello, {{ name }}! Welcome to PRA2 Docker!</strong></h1>
         <h1><strong>Please use your UofT email.</strong></h1>
     {% endif %}
 </div>
