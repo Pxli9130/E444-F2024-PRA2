@@ -5,7 +5,13 @@ i placed my docker related files at
 **E444-F2024-PRA2/flasky/4** , 
 
 with the files for activity 1.4, 
-this is to isolate from the docker examples of the textbook
+this is to isolate from the docker examples of the textbook.
+
+To use Docker container, cd to **E444-F2024-PRA2/flasky/4** ,
+then do
+    docker build -t flask-app .     (if this is first time on ur machine),
+    docker run -p 5000:5000 flask-app
+
 
 Flasky
 ======
