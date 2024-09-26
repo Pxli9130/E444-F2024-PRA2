@@ -1,7 +1,7 @@
 this repo is a clone of https://github.com/miguelgrinberg/flasky 
 
 i placed my docker related files at E444-F2024-PRA2/flasky/4 , with the files for activity 1.4, 
-this is to isolate from docker files from textbook
+this is to isolate from the docker examples of the textbook
 
 Flasky
 ======
