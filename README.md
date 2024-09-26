@@ -10,7 +10,8 @@ this is to isolate from the docker examples of the textbook.
 To use Docker container, cd to **E444-F2024-PRA2/flasky/4** ,
 then do
     docker build -t flask-app .     (if this is first time on ur machine),
-    docker run -p 5000:5000 flask-app
+    docker run -p 5000:5000 flask-app  ,
+    then open the link in cmd output in web browser
 
 
 Flasky
